@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@ViewBag.Message
+
+<h2>Index</h2>
+
+<body>
+    <div>
+        @for (int count=0;count<10;count++)
+        {
+            <p>@count</p>
+        }
+    </div>
+</body>
