@@ -1,4 +1,4 @@
-﻿
+﻿@model MVCWebSite1.Models.User
 @{
     ViewBag.Title = "Index";
 }
@@ -14,4 +14,17 @@
             <p>@count</p>
         }
     </div>
+    <p>@ViewData["First"]</p>
+    <p>@ViewBag.Second</p>
+    <p>@Model.Name</p>
+    <p>@TempData["Fourth"]</p>
+    <p>@TempData["Fourth"]</p>
+    <p>
+        @if (1 == 1)
+        {
+            <text>我要输出一发</text>
+            @:在这输出！
+        }
+    </p>
+    @Html.Raw("哦豁")
 </body>

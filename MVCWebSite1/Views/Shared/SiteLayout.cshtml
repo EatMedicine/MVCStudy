@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "这是模板页";
+}
+
+<body>
+    <h2>Welcome Here</h2>
+    @RenderBody() @*模板页的占位符*@
+</body>
+
+<footer>
+    @if (IsSectionDefined("Footer"))
+    {
+        @RenderSection("Footer");
+    }
+    else
+    {
+        <b>无Footer节点</b>
+    }
+</footer>
+

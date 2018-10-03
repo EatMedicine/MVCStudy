@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVCWebSite1.Models;
 
 namespace MVCWebSite1.Controllers
 {
@@ -12,9 +13,20 @@ namespace MVCWebSite1.Controllers
         public ActionResult Index()
         {
             ViewBag.Message = "First MVC App";
-            return View();
+
+            ViewData["First"] = "这是ViewData的内容";
+            ViewBag.Second = "这是ViewBag的内容";
+            var _user = new User { Name = "这是Model.User的内容" };
+            TempData["Fourth"] = "这是TempData的内容";
+
+            return View(_user);
         }
         
+        public ActionResult TestLayout()
+        {
+            return View();
+        }
+
         //Blog/ShowArticle
         public ActionResult ShowArticle()
         {
