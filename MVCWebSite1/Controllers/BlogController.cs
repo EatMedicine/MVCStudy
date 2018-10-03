@@ -22,6 +22,11 @@ namespace MVCWebSite1.Controllers
             return View(_user);
         }
         
+        public ActionResult TestPartial()
+        {
+            return View();
+        }
+
         public ActionResult TestLayout()
         {
             return View();

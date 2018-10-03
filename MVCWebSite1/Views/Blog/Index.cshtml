@@ -9,7 +9,7 @@
 
 <body>
     <div>
-        @for (int count=0;count<10;count++)
+        @for (int count = 0; count < 10; count++)
         {
             <p>@count</p>
         }
@@ -27,4 +27,12 @@
         }
     </p>
     @Html.Raw("哦豁")
+    @*下面这个是部分视图 用Html.RenderPartial()或Html.Partial()方法来添加TestPartial这个视图里面的代码 直接插入到这里*@
+    @{ Html.RenderPartial("TestPartial");}
+    @Html.Partial("TestPartial")
+    @*没搞懂RenderAction怎么用*@
+    @Html.Action("TestPartial","Blog")
+    @{ }
+
+
 </body>

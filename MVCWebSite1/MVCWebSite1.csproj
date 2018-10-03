@@ -192,6 +192,7 @@
     <Content Include="Views\Blog\Article.cshtml" />
     <Content Include="Views\Shared\SiteLayout.cshtml" />
     <Content Include="Views\Blog\TestLayout.cshtml" />
+    <Content Include="Views\Blog\TestPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
